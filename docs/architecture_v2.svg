@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" font-family="monospace" font-size="13">
+  <rect width="700" height="380" fill="#1e1e2e"/>
+  <text x="350" y="30" text-anchor="middle" fill="#cdd6f4" font-size="15" font-weight="bold">Version 2 - Architecture</text>
+  <text x="350" y="50" text-anchor="middle" fill="#6c7086" font-size="11">Code decides what is true. The model only describes it.</text>
+  <rect x="20" y="80" width="100" height="44" rx="6" fill="#313244" stroke="#89b4fa" stroke-width="1.5"/>
+  <text x="70" y="97" text-anchor="middle" fill="#89b4fa" font-size="12">Player</text>
+  <text x="70" y="113" text-anchor="middle" fill="#6c7086" font-size="10">types text</text>
+  <line x1="120" y1="102" x2="160" y2="102" stroke="#6c7086" stroke-width="1.5"/>
+  <rect x="160" y="68" width="130" height="72" rx="6" fill="#313244" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="225" y="88" text-anchor="middle" fill="#a6e3a1" font-size="12">main.py</text>
+  <text x="225" y="104" text-anchor="middle" fill="#6c7086" font-size="10">1. injection check</text>
+  <text x="225" y="118" text-anchor="middle" fill="#6c7086" font-size="10">2. parse then classify</text>
+  <text x="225" y="132" text-anchor="middle" fill="#6c7086" font-size="10">3. show result</text>
+  <line x1="290" y1="102" x2="330" y2="102" stroke="#6c7086" stroke-width="1.5"/>
+  <rect x="330" y="80" width="130" height="44" rx="6" fill="#313244" stroke="#cba6f7" stroke-width="1.5"/>
+  <text x="395" y="97" text-anchor="middle" fill="#cba6f7" font-size="12">command_parser</text>
+  <text x="395" y="113" text-anchor="middle" fill="#6c7086" font-size="10">regex only, no model</text>
+  <line x1="395" y1="124" x2="395" y2="170" stroke="#6c7086" stroke-width="1.5"/>
+  <line x1="460" y1="102" x2="530" y2="102" stroke="#6c7086" stroke-width="1" stroke-dasharray="4"/>
+  <rect x="530" y="68" width="140" height="72" rx="6" fill="#313244" stroke="#fab387" stroke-width="1.5"/>
+  <text x="600" y="88" text-anchor="middle" fill="#fab387" font-size="12">llm.py</text>
+  <text x="600" y="104" text-anchor="middle" fill="#6c7086" font-size="10">classify + narrate</text>
+  <text x="600" y="118" text-anchor="middle" fill="#6c7086" font-size="10">retries on 429/503</text>
+  <text x="600" y="132" text-anchor="middle" fill="#6c7086" font-size="10">validates output</text>
+  <rect x="310" y="170" width="150" height="72" rx="6" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="385" y="190" text-anchor="middle" fill="#a6e3a1" font-size="12">engine.py</text>
+  <text x="385" y="206" text-anchor="middle" fill="#6c7086" font-size="10">tracks all state</text>
+  <text x="385" y="220" text-anchor="middle" fill="#a6e3a1" font-size="10">DRAWER_CODE = 1931</text>
+  <text x="385" y="234" text-anchor="middle" fill="#6c7086" font-size="10">never sent to model</text>
+  <line x1="310" y1="206" x2="225" y2="206" stroke="#6c7086" stroke-width="1.5"/>
+  <line x1="225" y1="206" x2="225" y2="140" stroke="#6c7086" stroke-width="1.5"/>
+  <rect x="20" y="275" width="660" height="90" rx="6" fill="#181825" stroke="#a6e3a1" stroke-width="1" stroke-dasharray="4"/>
+  <text x="35" y="295" fill="#a6e3a1" font-size="11" font-weight="bold">Improvements over V1</text>
+  <text x="35" y="313" fill="#cdd6f4" font-size="11">V  Secrets in Python code - model never sees drawer code</text>
+  <text x="35" y="331" fill="#cdd6f4" font-size="11">V  API errors retried then plain text shown - never crashes</text>
+  <text x="355" y="313" fill="#cdd6f4" font-size="11">V  Win condition in Python - game ends correctly</text>
+  <text x="355" y="331" fill="#cdd6f4" font-size="11">V  11 deterministic offline tests, no API key needed</text>
+  <text x="35" y="349" fill="#cdd6f4" font-size="11">V  Injection filter blocks adversarial input before model</text>
+</svg>
