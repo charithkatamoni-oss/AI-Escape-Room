@@ -5,7 +5,7 @@ from google.genai import types
 
 load_dotenv()
 
-MODEL = "gemini-3.5-flash-lite"  # change here if Google renames the model
+MODEL = "gemini-3.6-flash" # change here if Google renames the model
 
 SYSTEM_PROMPT = """
 You are the game master of a text escape room called "Hale & Daughters".
